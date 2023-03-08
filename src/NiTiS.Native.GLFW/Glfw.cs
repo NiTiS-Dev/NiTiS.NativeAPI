@@ -32,4 +32,11 @@ public unsafe partial class Glfw
 	[Return(Type = typeof(int))]
 	[Browsable(false)]
 	public static readonly delegate* unmanaged[Stdcall]<int> _init;
+
+	[NativeProperty(Type = NativeName, Value = "glfwInit")]
+	[NativeProperty(Type = "Native/CallConv", Value = "__stdcall")]
+	[Argument(Index = 0, Type = typeof(void*))]
+	[Argument(Index = 1, Type = typeof(int))]
+	[Browsable(false)]
+	public static readonly delegate* unmanaged[Stdcall]<void*, int, void> _setWindowShouldClose;
 }

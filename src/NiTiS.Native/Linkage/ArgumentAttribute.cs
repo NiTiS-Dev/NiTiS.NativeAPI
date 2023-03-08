@@ -2,6 +2,7 @@
 
 namespace NiTiS.Native.Linkage;
 
+[AttributeUsage(AttributeTargets.Method | AttributeTargets.Field, AllowMultiple = true)]
 public sealed class ArgumentAttribute : Attribute
 {
     public required ushort Index { get; init; }
