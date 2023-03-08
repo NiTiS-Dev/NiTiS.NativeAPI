@@ -1,0 +1,63 @@
+<Project InitialTargets="">
+	<ItemGroup>
+		<None
+			Condition="$(PackageLicenseExpression) == ''"
+			Include="$(MSBuildThisFileDirectory)/LICENSE"
+			Pack="true"
+			PackagePath="" />
+		<None Condition="$(GenericPackageIcon) == ''" Include="$(MSBuildThisFileDirectory)/ICON.png" Pack="true" PackagePath="" />
+		<None Condition="$(GenericPackageIcon) != ''" Include="$(MSBuildThisFileDirectory)/src/$(PackageId)/ICON.png" Pack="true" PackagePath="" />
+
+		<None Include="README.md" Pack="true" PackagePath="" />
+	</ItemGroup>
+	
+	<PropertyGroup>
+		<Authors>NiTiS-Dev</Authors>
+		<TargetFrameworks>net5.0;net48;netstandard2.0</TargetFrameworks>
+		<Version>$(Version)</Version>
+		<AssemblyVersion>$(Version)</AssemblyVersion>
+		<PackageVersion Condition="$(VersionSuffix)==''">$(Version)</PackageVersion>
+		<PackageVersion Condition="$(VersionSuffix)!=''">$(Version)-$(VersionSuffix)</PackageVersion>
+		<PackageOutputPath>$(MSBuildThisFileDirectory)/.pack/</PackageOutputPath>
+
+		<!-- Package info -->
+		<TargetName>$(AssemblyName)</TargetName>
+		<Copyright>Copyright (c) NiTiS-Dev and contributors</Copyright>
+		
+		<Summary>$(Description)</Summary>
+		<PackageIcon>./ICON.png</PackageIcon>
+		<RepositoryUrl>https://github.com/NiTiS-Dev/NiTiS.NativeAPIs</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageLicenseFile Condition="$(PackageLicenseExpression) == ''">./LICENSE</PackageLicenseFile>
+		<PackageReadmeFile>./README.md</PackageReadmeFile>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		
+		<!-- C# options -->
+		<Nullable>enable</Nullable>
+		<LangVersion>latest</LangVersion>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<NoWarn>NETSDK1138</NoWarn>
+		
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>full</DebugType>
+		<Optimize>false</Optimize>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration)=='Release'">
+		<DebugType>pdbonly</DebugType>
+		<Optimize>true</Optimize>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	</PropertyGroup>
+	
+	<PropertyGroup Condition="'$(NativeAPI)' == 'true'">
+		<IncludeBuildOutput>false</IncludeBuildOutput>
+		<Nullable>disable</Nullable>
+		<IncludeContentInPack>true</IncludeContentInPack>
+
+		<DebugSymbols>false</DebugSymbols>
+		<DebugType>portable</DebugType>
+		<Optimize>false</Optimize>
+		<GenerateDocumentationFile>false</GenerateDocumentationFile>
+	</PropertyGroup>
+	
+</Project>

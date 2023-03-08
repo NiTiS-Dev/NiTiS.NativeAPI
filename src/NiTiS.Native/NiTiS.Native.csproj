@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<NativeAPI>false</NativeAPI>
+		
+		<Version>0.0.1</Version>
+		<VersionSuffix>preview</VersionSuffix>
+
+		<Description>Library for work with native libraries.</Description>
+	</PropertyGroup>
+
+	<Import Project="../../Meta.props" />
+
+	<ItemGroup>
+	  <PackageReference Include="NiTiS.Core" Version="3.3.1" />
+	</ItemGroup>
+</Project>

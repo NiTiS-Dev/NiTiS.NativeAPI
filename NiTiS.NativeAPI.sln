@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NiTiS.Native", "src\NiTiS.Native\NiTiS.Native.csproj", "{0F6CCF7C-A795-4F2D-89D1-68ED58F00676}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Root", "Root", "{B1CD5052-AC29-4F71-A96D-E2D5CAA39D2D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		.github\workflows\build.yml = .github\workflows\build.yml
+		LICENSE = LICENSE
+		generator.targets = generator.targets
+		Meta.props = Meta.props
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NiTiS.Native.GLFW.Container", "src\NiTiS.Native.GLFW.Container\NiTiS.Native.GLFW.Container.csproj", "{31116DA3-8ECD-42A4-A712-7C05738C430C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NiTiS.Native.Sandbox", "tests\NiTiS.Native.Sandbox\NiTiS.Native.Sandbox.csproj", "{F37ABB72-7277-4269-919C-5496C8F3B3E4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NiTiS.Native.GLFW", "src\NiTiS.Native.GLFW\NiTiS.Native.GLFW.csproj", "{D644E522-4678-40F6-867A-1A1DABFBBEEC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NiTiS.Native.Generator", "src\NiTiS.Native.Generator\NiTiS.Native.Generator.csproj", "{AE54C4EC-FCB1-4F09-99C2-0F21A9814CA0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F6CCF7C-A795-4F2D-89D1-68ED58F00676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F6CCF7C-A795-4F2D-89D1-68ED58F00676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F6CCF7C-A795-4F2D-89D1-68ED58F00676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F6CCF7C-A795-4F2D-89D1-68ED58F00676}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31116DA3-8ECD-42A4-A712-7C05738C430C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31116DA3-8ECD-42A4-A712-7C05738C430C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31116DA3-8ECD-42A4-A712-7C05738C430C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31116DA3-8ECD-42A4-A712-7C05738C430C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F37ABB72-7277-4269-919C-5496C8F3B3E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F37ABB72-7277-4269-919C-5496C8F3B3E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F37ABB72-7277-4269-919C-5496C8F3B3E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F37ABB72-7277-4269-919C-5496C8F3B3E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D644E522-4678-40F6-867A-1A1DABFBBEEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D644E522-4678-40F6-867A-1A1DABFBBEEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D644E522-4678-40F6-867A-1A1DABFBBEEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D644E522-4678-40F6-867A-1A1DABFBBEEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE54C4EC-FCB1-4F09-99C2-0F21A9814CA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE54C4EC-FCB1-4F09-99C2-0F21A9814CA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE54C4EC-FCB1-4F09-99C2-0F21A9814CA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE54C4EC-FCB1-4F09-99C2-0F21A9814CA0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A296B05C-F900-4DA5-8F6A-33271D8BA61D}
+	EndGlobalSection
+EndGlobal

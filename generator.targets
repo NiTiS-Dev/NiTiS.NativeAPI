@@ -1,0 +1,17 @@
+<Project xmlns='http://schemas.microsoft.com/developer/msbuild/2003' ToolsVersion="15.0">
+
+	<UsingTask
+		TaskName="GenerateApi"
+		TaskFactory="CodeTaskFactory"
+		AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
+		<ParameterGroup>
+		</ParameterGroup>
+		<Task>
+			<Code Type="Fragment" Language="cs">
+				<![CDATA[
+Log.LogMessage(MessageImportance.High, "Hello, world!");
+]]>
+			</Code>
+		</Task>
+	</UsingTask>
+</Project>
